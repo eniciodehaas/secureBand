@@ -1,0 +1,132 @@
+main {
+  position: relative;
+  width: 100vw;
+  margin-top: 150px;
+  min-height: calc(100vh - 150px - 50px);
+}
+
+.feestdagen {
+  margin: 100px auto;
+  width: 80vw;
+  display: grid;
+  grid-row-gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.feestdag {
+  border: 2px solid rgb(0,176,212);
+  width: 250px;
+  height: 500px;
+  background-color: #fff;
+}
+
+.feestdag .feestdagTitel {
+  text-align: center;
+  padding: 5px;
+  font-size: 18px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feestdag .feestdagImg {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-top: 2px solid rgb(0,176,212);
+  border-bottom: 2px solid rgb(0,176,212);
+}
+
+.feestdag .feestdagP {
+  padding: 10px;
+  height: 220px;
+  font-size: .8em;
+}
+
+.feestdag .feestdagDate {
+  position: relative;
+  text-align: center;
+  border-top: 2px solid rgb(0,176,212);
+  padding: 5px;
+  font-size: 20px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1480px) {
+  .feestdagen {
+    grid-template-columns: 1fr;
+  }
+  .feestdag {
+    width: 80vw;
+    /* min-width: 480px; */
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .feestdagTitel {
+    grid-column: 1/2;
+    border-right: 2px solid rgb(0,176,212);
+    min-width: 130px;
+  }
+
+  .feestdagImg {
+    box-sizing: border-box;
+    grid-column: 1/2;
+    width: 100% !important;
+    height: 100px !important;
+    object-fit: cover;
+    object-position: center;
+    border-right: 2px solid rgb(0,176,212);
+    min-width: 130px;
+  }
+
+  .feestdagDate {
+    grid-column: 1/2;
+    border-top: none !important;
+    border-right: 2px solid rgb(0,176,212);
+    min-width: 130px;
+}
+
+  .feestdagP {
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+    padding: 25px !important;
+    grid-column: 2/3;
+    height: 200px !important;
+    grid-row: 1/4;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    margin-top: 250px;
+  }
+
+  .feestdag .feestdagP {
+    padding: 3px !important;
+  }
+
+  .feestdag .feestdagTitel {
+    font-size: 12px;
+    min-width: inherit;
+    width: 80px;
+  }
+
+  .feestdag .feestdagDate {
+    font-size: 12px;
+    min-width: inherit;
+    width: 80px !important;
+  }
+
+  .feestdag .feestdagImg {
+    min-width: inherit;
+    width: 92px !important;
+  }
+}
